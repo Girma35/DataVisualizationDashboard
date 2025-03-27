@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2016", // Or a later version (e.g., "es2017", "es2020", "ESNext")
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["es2015", "dom"] // This is the crucial line
+  },
+  "include": ["src/**/*.ts"], // Include TypeScript files in the src directory
+  "exclude": ["node_modules"]  // Exclude node_modules
+}

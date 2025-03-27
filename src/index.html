@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Data Dashboard</title>
+
+    <style src="./style.css"></style>
+    <link rel="icon" type="image/x-icon" src="./"> </link>
+</head>
+
+<div>
+    <canvas id="Chart"></canvas>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  
+<body class="bg-gray-100">
+
+    <div class="dashboard-container">
+        <h1 class="text-2xl font-semibold text-gray-800 mb-4">Interactive Data Dashboard</h1>
+
+        <div class="controls-container">
+            <select id="dataSelector" class="form-control">
+                <option value="temperature">Temperature</option>
+                <option value="humidity">Humidity</option>
+                <option value="pressure">Pressure</option>
+            </select>
+            <button id="updateChartButton" class="btn btn-primary">Update Chart</button>
+            <button id="refreshDataButton" class="btn btn-secondary">Refresh Data</button>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="myChart" width="400" height="200"></canvas>
+        </div>
+
+        <div id="dataInfo" class="data-info">
+            <p><strong>Selected Data:</strong> <span id="selectedDataName">Temperature</span></p>
+            <p><strong>Minimum Value:</strong> <span id="minValue">N/A</span></p>
+            <p><strong>Maximum Value:</strong> <span id="maxValue">N/A</span></p>
+            <p><strong>Average Value:</strong> <span id="avgValue">N/A</span></p>
+        </div>
+    </div>
+
+    <script type="module" src="./dataService.js"></script>
+
+
+</script>
+
+</body>
+</html>
